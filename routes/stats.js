@@ -59,5 +59,3 @@ var getHashrate = function(res) {
     res.end();
   });
 }
-
-git 
