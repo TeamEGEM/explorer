@@ -1,3 +1,3 @@
-# ETIExplorer 
+# EGEM Explorer
 
-<b>Live Version: [explorer.einc.io](http://explorer.einc.io)</b>
+<b>Live Version: [explorer.egem.io](https://explorer.egem.io)</b>
