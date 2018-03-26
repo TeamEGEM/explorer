@@ -7,8 +7,8 @@ angular.module('BlocksApp').controller('StatsController', function($stateParams,
         "egem_hashrate": {
             "title": "EGEM Hashrate Growth"
         },
-        "miner_hashrate": {
-            "title": "Miner Block Distribution"
+        "blockdistribution": {
+            "title": "Miner block distribution of the last 1000 blocks."
         },
         "The_bomb_chart": {
             "title": "The bomb chart"
