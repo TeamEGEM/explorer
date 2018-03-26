@@ -1,19 +1,14 @@
 angular.module('BlocksApp').controller('StatsController', function($stateParams, $rootScope, $scope) {
 
     $rootScope.isHome = false;
-  
-    /*
-      Chart types: 
-        etc_hashrate: ETC Hashrate Growth
-        miner_hashrate: Miner Hashrate Distribution
-    */
+
 
     const CHART_TYPES = {
-        "etc_hashrate": {
-            "title": "ETC Hashrate Growth"
+        "egem_hashrate": {
+            "title": "EGEM Hashrate Growth"
         },
         "miner_hashrate": {
-            "title": "Miner Hashrate Distribution"
+            "title": "Miner Block Distribution"
         },
         "The_bomb_chart": {
             "title": "The bomb chart"
