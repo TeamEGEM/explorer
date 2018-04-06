@@ -12,16 +12,16 @@
   },
   "dependencies": {
     "bignumber.js": "^5.0.0",
-    "body-parser": "^1.12.2",
+    "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "ejs": "~2.5.7",
     "express": "^4.16.0",
     "mongoose": "^4.13.8",
     "morgan": "^1.9.0",
     "serve-favicon": "~2.4.5",
-    "socket.io": "^2.0.4",
-    "solc": "^0.4.19",
-    "web3": "~0.19.0"
+    "socket.io": "^2.1.0",
+    "solc": "^0.4.21",
+    "web3": "^0.19.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",

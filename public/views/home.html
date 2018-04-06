@@ -6,12 +6,11 @@
         <div class="portlet light">
             <div class="portlet-title">
                 <div class="caption caption-md">
-                    <i class="fa fa-cubes font-red"></i>
-                    <span class="caption-subject font-red bold uppercase">Latest Blocks</span>
+                    <span class="caption-subject font-blue bold uppercase"><i class="glyphicon glyphicon-menu-hamburger"></i> Latest Blocks</span>
                 </div>
                 <div class="actions">
                     <div class="btn-group">
-                        <a class="btn btn-med" ng-click="reloadBlocks()"><i class="fa fa-refresh" ng-class="{'fa-spin': blockLoading}"></i>
+                        <a class="btn btn-med" ng-click="reloadBlocks()"><span ng-class="{'fa-spin': blockLoading}"><i class="glyphicon glyphicon-refresh"></i></span>
                         </a>
                     </div>
                 </div>
@@ -21,16 +20,18 @@
                     <div ng-repeat="t in latest_blocks track by $index" class="todo-tasklist-item item-border-green row" ng-class="(t.extraData.indexOf('Parity') > -1) ? 'item-border-red': '';(t.extraData.indexOf('Pool') > -1) ? 'item-border-blue': ''">
                         <!--TODO: color by known miners -->
                         <div class="col-sm-5">
-                            <span class="todo-tasklist-item-title"><i class="fa fa-cube"></i> <a href="/block/{{t.number}}">{{t.number}}</a></span><br>
+                            <span class="todo-tasklist-item-title"><i class="glyphicon glyphicon-link"></i> <a href="/block/{{t.number}}">{{t.number}}</a></span><br>
                             <span class="todo-tasklist-date">
-                                <i class="fa fa-hourglass-o"></i>{{t.timestamp | timeDuration }} ago</span>
+                                Mined: </i>{{t.timestamp | timeDuration }} ago</span>
                         </div>
                         <div class="todo-tasklist-controls col-sm-7">
-                            <div class="todo-tasklist-item-text"><a href="/addr/{{t.miner}}">{{t.extraData}}</a><br>
-                            by <a href="/addr/{{t.miner}}">{{t.miner}}</a><br>
-                            {{t.transactions.length}} txns
+                            <div class="todo-tasklist-item-text">
+                            <a href="/addr/{{t.miner}}">{{t.extraData}}</a><br>
+                            -------------------------------------------------<br>
+                            <i class="glyphicon glyphicon-user"></i> - <a href="/addr/{{t.miner}}">{{t.miner}}</a>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -42,12 +43,11 @@
         <div class="portlet light">
             <div class="portlet-title">
                 <div class="caption caption-md">
-                    <i class="icon-bar-chart font-red"></i>
-                    <span class="caption-subject font-red bold uppercase">Recent tx</span>
+                    <span class="caption-subject font-blue bold uppercase"><i class="glyphicon glyphicon-credit-card"></i> Recent tx</span>
                 </div>
                 <div class="actions">
                     <div class="btn-group">
-                        <a class="btn btn-med" ng-click="reloadTransactions()"><i class="fa fa-refresh" ng-class="{'fa-spin': txLoading}"></i>
+                        <a class="btn btn-med" ng-click="reloadBlocks()"><span ng-class="{'fa-spin': blockLoading}"><i class="glyphicon glyphicon-refresh"></i></span>
                         </a>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="todo-tasklist-controls">
                       <span class="todo-tasklist-item-text">From <a href="/addr/{{t.from}}">{{t.from.substr(0,24)}}...</a></span>
-                      <span class="todo-tasklist-item-text">To <a href="/addr/{{t.to}}">{{t.to.substr(0,24)}}...</a></span><br>
+                      <span class="todo-tasklist-item-text"><i class="glyphicon glyphicon-transfer"></i> <a href="/addr/{{t.to}}">{{t.to.substr(0,24)}}...</a></span><br>
                       <div class="todo-tasklist-item-text" style="margin-top:4px;">{{t.value}} EGEM</div>
                     </div>
                 </div>
